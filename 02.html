@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <style>
+  body {
+    display: flex;
+  }
+  .selector {
+    width: 100px;
+    height: 100px;
+    background: #1ba876;
+    margin: 3px;
+  }
+  </style>
+</head>
+<body>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <script>
+
+    gsap.to(".selector",{
+      // translateX: 200,
+      x: 100,
+      y: 100,
+      background: 'orange',
+      duration: 1, //seconds, not ms .6 .8 1 2 e t.c.
+      delay: .8,
+      repeat: 5,
+      repeatDelay: 1, //delay between repeat
+      height: 120,
+      width: 120,
+      borderRadius: 100,
+      stagger: .5, //delay of start for each element
+      ease: "power2.inOut", //animation timing function
+      onCompleted: function() { //first time finished
+        console.log('completed');
+      },
+      onStart: function() {
+        console.log('start');
+      },
+      onFinish: function() {
+        console.log('finish')
+      },
+      paused: false, //pause - true
+    })
+  </script>
+</body>
+</html>
