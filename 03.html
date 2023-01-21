@@ -24,10 +24,10 @@
         const el = document.querySelector(selector);
         el.innerHTML = JSON.stringify(
           {
-            subscriber: obj.subscriber ,
-            sponsors: obj.sponsors ,
-            delta: obj.delta ,
-            myColor: obj.myColor
+            subscriber: obj.subscriber,
+            sponsors: obj.sponsors,
+            delta: obj.delta,
+            myColor: obj.myColor,
           },
           null,
           " "
@@ -49,9 +49,9 @@
         myColor: "#987655",
         duration: 10,
         delay: 5,
-        onUpdate: function() {
-          showMyObj('.selector', myObj)
-        }
+        onUpdate: function () {
+          showMyObj(".selector", myObj);
+        },
       });
     </script>
   </body>
